@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            //define sideA length
+            var sideA = 5;
+
+            //define sideB length
+            var sideB = 6;
+
+            //define sideC length
+            var sideC = 7;
+
+            //define p as half the perimeter of triangle
+            let perimeter = (sideA + sideB + sideC) / 2;
+
+            let area = perimeter * (perimeter - sideA) * (perimeter - sideB) * (perimeter - sideC);
+
+            //define triangleArea as the squareroot of the area of the triangle
+            let triangleArea = Math.sqrt(area)
+            
+            
+            console.log(triangleArea);
+        
+        </script>
+    </body>
+</html>
