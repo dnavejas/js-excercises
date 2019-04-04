@@ -8,22 +8,29 @@
     </head>
     <body>
         <script>
-            function capitalizeString(str){
+            function findLongestWord(str){
 
-var splitStr = str.toLowerCase().split(' ');
+            var strSplit = str.split(' ');
 
-for (var i = 0; i < splitStr.length; i++) {
+            var longestWord = 0;
 
-    splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+            var word = null;
 
-}
+            for (var i = 0; i < strSplit.length - 1; i++) {
 
-return splitStr.join(' ')
+                if (longestWord < strSplit[i].length){
+                    longestWord = strSplit[i].length;
+                    word = strSplit[i];
+                }
 
-};
+            }
 
-console.log(capitalizeString("javascript is my most favorite language"));
-            
+            return word;
+
+            };
+
+            console.log(findLongestWord("A 24 week coding bootcamp is making me nerd out!"));
+                        
             
             
         </script>
