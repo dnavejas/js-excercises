@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+        function moneyToCoins(money, coins) 
+            {
+            if (money === 0) 
+            {
+                return [];
+            } 
+            else
+            {
+                if (money >= coins[0]) 
+                {
+                    left = (money - coins[0]);
+                    return [coins[0]].concat(moneyToCoins(left, coins) );
+                    } 
+                else
+                    {
+                    coins.shift();
+                    return moneyToCoins(money, coins);
+                    }
+                }
+            } 
+            console.log(moneyToCoins(46, [25, 10, 5, 1]));
+        
+        
+        
+        
+        
+        </script>
+    </body>
+</html>
